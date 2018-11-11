@@ -1,0 +1,81 @@
+Z:\Galaxies\Galaxies\bin\Debug\Galaxies.exe.config
+Z:\Galaxies\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+Z:\Galaxies\Galaxies\obj\Debug\Galaxies.Form1.resources
+Z:\Galaxies\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+Z:\Galaxies\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+Z:\Galaxies\Galaxies\bin\Debug\Galaxies.exe
+Z:\Galaxies\Galaxies\bin\Debug\Galaxies.pdb
+Z:\Galaxies\Galaxies\obj\Debug\Galaxies.exe
+Z:\Galaxies\Galaxies\obj\Debug\Galaxies.pdb
+D:\Galaxies\Galaxies\bin\Debug\Galaxies.exe.config
+D:\Galaxies\Galaxies\obj\Debug\Galaxies.exe
+D:\Galaxies\Galaxies\obj\Debug\Galaxies.pdb
+D:\Galaxies\Galaxies\bin\Debug\Galaxies.exe
+D:\Galaxies\Galaxies\bin\Debug\Galaxies.pdb
+D:\Galaxies\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+D:\Galaxies\Galaxies\obj\Debug\Galaxies.Form1.resources
+D:\Galaxies\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+D:\Galaxies\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\bin\Debug\Galaxies.exe.config
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\obj\Debug\Galaxies.exe
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\obj\Debug\Galaxies.pdb
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\bin\Debug\Galaxies.exe
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\bin\Debug\Galaxies.pdb
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\obj\Debug\Galaxies.Form1.resources
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+C:\Users\Полина\Desktop\Galaxies_new\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe.config
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.exe
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.pdb
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Form1.resources
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.pdb
+C:\Users\Полина\Desktop\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+G:\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe.config
+G:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.exe
+G:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.pdb
+G:\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe
+G:\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.pdb
+G:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+G:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Form1.resources
+G:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+G:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe.config
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.exe
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.pdb
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.pdb
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Form1.resources
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+D:\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe.config
+D:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.exe
+D:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.pdb
+D:\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe
+D:\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.pdb
+D:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+D:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Form1.resources
+D:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+D:\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe.config
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.exe
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.pdb
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.pdb
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Form1.resources
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+C:\Users\User\Documents\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe.config
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.exe
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.pdb
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.exe
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\bin\Debug\Galaxies.pdb
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Form1.resources
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.Properties.Resources.resources
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Debug\Galaxies.csproj.GenerateResource.Cache

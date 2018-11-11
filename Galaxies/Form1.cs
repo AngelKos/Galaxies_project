@@ -13,7 +13,7 @@ namespace Galaxies
 {
     public partial class Form1 : Form
     {
-        List<Circle> sh = new List<Circle>();
+        List<Circle> sh = new List<Circle>(); //List of galaxies
         List<List<double>> length = new List<List<double>>();
         double[] D;
         int[] color;
@@ -910,6 +910,23 @@ namespace Galaxies
             pictureBox1.Enabled = true;
             pictureBox1.Visible = true;
             trackBar1.Visible = true;
+           
+            MinCut.Enabled = true;
+            MinCut.Visible = true;
+            MinCut.Location = new Point(30, 50);
+            
+            MaxCut.Enabled = true;
+            MaxCut.Visible = true;
+            MaxCut.Location = new Point(30, 75);
+            MinText.Enabled = true;
+            MinText.Visible = true;
+            MinText.Location = new Point(50, 49);
+            MaxText.Enabled = true;
+            MaxText.Visible = true;
+            MaxText.Location = new Point(50, 74);
+            Cut.Enabled = true;
+            Cut.Visible = true;
+            Cut.Location = new Point(50, 94);
             for (int i = 0; i < sh.Count; i++)
             {
                 sh[i].Draw_Line = false;
@@ -1156,6 +1173,16 @@ namespace Galaxies
             hScrollBar1.Value = 0;
             trackBar1.Visible = false;
             trackBar1.Value = 1;
+            MinCut.Enabled = false;
+            MinCut.Visible = false;
+            MaxCut.Enabled = false;
+            MaxCut.Visible = false;
+            MinText.Enabled = false;
+            MinText.Visible = false;
+            MaxText.Enabled = false;
+            MaxText.Visible = false;
+            Cut.Enabled = false;
+            Cut.Visible = false;
         }
 
         private void button_return_to_file_Click(object sender, EventArgs e)
@@ -1179,6 +1206,16 @@ namespace Galaxies
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
+            MinCut.Enabled = false;
+            MinCut.Visible = false;
+            MaxCut.Enabled = false;
+            MaxCut.Visible = false;
+            MinText.Enabled = false;
+            MinText.Visible = false;
+            MaxText.Enabled = false;
+            MaxText.Visible = false;
+            Cut.Enabled = false;
+            Cut.Visible = false;
         }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
@@ -1241,7 +1278,7 @@ namespace Galaxies
                 }
             }
             int sum = 0;
-            int sum_max = 0, ind = -1;
+            int sum_max = 0, ind = -1, ind1 = -1, sum_max1 = 0;
             for (int i = 0; i < num; i++)
             {
                 sum = 0;
@@ -1254,8 +1291,19 @@ namespace Galaxies
                 }
                 if (sum > sum_max)
                 {
+                    int t = sum_max, it = ind;
                     sum_max = sum;
                     ind = i;
+                    if(sum_max1 < t)
+                    {
+                        sum_max1 = t;
+                        ind1 = it;
+                    }
+                }
+                else if (sum > sum_max1)
+                {
+                    sum_max1 = sum;
+                    ind1 = i;
                 }
             }
             for (int j = 0; j < sh.Count; j++)
@@ -1267,7 +1315,7 @@ namespace Galaxies
             }
             for (int j = 0; j < sh.Count; j++)
             {
-                if (sh[j].Number_of_cluster == ind)
+                if (sh[j].Number_of_cluster == ind || sh[j].Number_of_cluster == ind1)
                 {
                     sw.WriteLine(sh[j].Objid);
                 }
@@ -1473,6 +1521,31 @@ namespace Galaxies
         private void ReturnToFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
           button_return_to_file.PerformClick();
+        }
+
+        private void Cut_Click(object sender, EventArgs e)
+        {
+            double min = double.Parse(MinText.Text), max = double.Parse(MaxText.Text);
+            for(int i = 0; i < sh.Count(); i++)
+            {
+                if (sh[i].Redshift < min || sh[i].Redshift > max) sh.RemoveAt(i);
+            }
+
+        }
+
+        private void MinCut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MinText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MaxText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
