@@ -1078,7 +1078,7 @@ namespace Galaxies_console
                 }
             }
             int sum = 0;
-            int sum_max = 0, ind = -1;
+            int sum_max = 0, ind = -1, ind1 = -1, sum_max1 = 0;
             for (int i = 0; i < num; i++)
             {
                 sum = 0;
@@ -1091,8 +1091,19 @@ namespace Galaxies_console
                 }
                 if (sum > sum_max)
                 {
+                    int t = sum_max, it = ind;
                     sum_max = sum;
                     ind = i;
+                    if (sum_max1 < t)
+                    {
+                        sum_max1 = t;
+                        ind1 = it;
+                    }
+                }
+                else if (sum > sum_max1)
+                {
+                    sum_max1 = sum;
+                    ind1 = i;
                 }
             }
             for (int j = 0; j < sh.Count; j++)
@@ -1104,7 +1115,7 @@ namespace Galaxies_console
             }
             for (int j = 0; j < sh.Count; j++)
             {
-                if (sh[j].Number_of_cluster == ind)
+                if (sh[j].Number_of_cluster == ind || sh[j].Number_of_cluster == ind1)
                 {
                     sw.WriteLine(sh[j].Objid);
                 }

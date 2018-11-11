@@ -4,3 +4,6 @@ C:\Users\User\Documents\Galaxies_console\Galaxies_console\Galaxies_console\bin\D
 C:\Users\User\Documents\Galaxies_console\Galaxies_console\Galaxies_console\obj\Debug\Galaxies_console.exe
 C:\Users\User\Documents\Galaxies_console\Galaxies_console\Galaxies_console\obj\Debug\Galaxies_console.pdb
 C:\Users\User\Documents\Galaxies_console\Galaxies_console\Galaxies_console\obj\Debug\Galaxies_console.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_console\Galaxies_console\Galaxies_console\bin\Debug\Galaxies_console.exe.config
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_console\Galaxies_console\Galaxies_console\obj\Debug\Galaxies_console.exe
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_console\Galaxies_console\Galaxies_console\obj\Debug\Galaxies_console.pdb
