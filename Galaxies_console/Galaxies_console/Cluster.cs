@@ -151,7 +151,6 @@ namespace Galaxies_console
             {
                 Next_algorithm();
             }
-            Make_intermediate_file();
             Make_final_file(file0.Substring(0, file0.Length - 4) + "_Clusters.txt");
             /*switch (variant)
             {
@@ -166,70 +165,6 @@ namespace Galaxies_console
             Make_file();*/
         }
 
-        void Make_intermediate_file()
-        {
-            List<string> s = System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster_0.txt").ToList<string>();
-            s.AddRange(System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster_1.txt"));
-            s.AddRange(System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster_2.txt"));
-            s.AddRange(System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster_3.txt"));
-            s.AddRange(System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster_4.txt"));
-            s.AddRange(System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster_5.txt"));
-            s.Sort();
-            for (int i = 0; i < s.Count; i++)
-            {
-                int j = 0;
-                while (j < s[i].Length && s[i][j] != ' ') { j++; }
-                s[i] = s[i].Substring(0, j);
-            }
-            StreamWriter sw = new StreamWriter(file0.Substring(0, file0.Length - 4) + "_сluster.txt");
-            int sum = 0;
-            for (int i = 1; i < s.Count; i++)
-            {
-                if (s[i] == s[i - 1])
-                {
-                    sum++;
-                }
-                else
-                {
-                    if (sum >= 2)
-                    {
-                        sw.WriteLine(s[i - 1]);
-                    }
-                    sum = 0;
-                }
-            }
-            if (sum >= 2)
-            {
-                sw.WriteLine(s[s.Count - 1]);
-            }
-            s.Clear();
-            sw.Close();
-            string[] ss = System.IO.File.ReadAllLines(file0.Substring(0, file0.Length - 4) + "_сluster.txt");
-            for (int j = 0; j < sh.Count; j++)
-            {
-                sh[j].Draw_Line = false;
-                sh[j].Next_index = -1;
-            }
-            int ind = -1;
-            for (int i = 0; i < ss.Length; i++)
-            {
-                for (int j = 0; j < sh.Count; j++)
-                {
-                    if (ss[i] == sh[j].Objid)
-                    {
-                        if (ind == -1) ind = j;
-                        else
-                        {
-                            sh[ind].Next_index = j;
-                            sh[ind].Draw_Line = true;
-                            ind = j;
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-
         void Next_algorithm()
         {
             if (variant <= 5)
@@ -241,12 +176,22 @@ namespace Galaxies_console
                 }
                 switch (variant)
                 {
-                    case 0: { Console.WriteLine("Algorytm_of_neighbour. \n Start"); Algorytm_of_neighbour(); Console.WriteLine(" Finish"); } break;
-                    case 1: { Console.WriteLine("Method_of_branches_and_borders. \n Start"); Method_of_branches_and_borders(); Console.WriteLine(" Finish"); } break;
-                    case 2: { Console.WriteLine("Algorythm_of_Dejkstra. \n Start"); Algorythm_of_Dejkstra(); Console.WriteLine(" Finish"); } break;
-                    case 3: { Console.WriteLine("Method_of_local_improvement. \n Start"); Method_of_local_improvement(); Console.WriteLine(" Finish"); } break;
-                    case 4: { Console.WriteLine("Ant_algorithm. \n Start"); Ant_algorithm(); Console.WriteLine(" Finish"); } break;
-                    case 5: { Console.WriteLine("Method_K_average. \n Start"); Method_K_average(); Console.WriteLine(" Finish"); } break;
+                    case 0: { Console.WriteLine("Алгоритм ближайшего соседа. \n Начало"); Algorytm_of_neighbour(); Console.WriteLine(" Конец"); } break;
+                    case 1: { Console.WriteLine("Метод ветвей и границ. \n Начало"); Method_of_branches_and_borders(); Console.WriteLine(" Конец"); } break;
+                    case 2: { Console.WriteLine("Алгорит Дейкстры. \n Начало"); Algorythm_of_Dejkstra(); Console.WriteLine(" Конец"); } break;
+                    case 3: { Console.WriteLine("Метод локальных улучшений. \n Начало"); Method_of_local_improvement(); Console.WriteLine(" Конец"); } break;
+                    case 4: 
+                        {
+                            for (int i = 0; i < sh.Count; i++)
+                            {
+                                sh[i].Next_index = -1;
+                            }
+                            Console.WriteLine("Муравьиный алгоритм. \n Начало"); 
+                            Ant_algorithm(); 
+                            Console.WriteLine(" Конец"); 
+                        } 
+                        break;
+                    case 5: { Console.WriteLine("Метод К средних. \n Начало"); Method_K_average(); Console.WriteLine(" Конец"); } break;
                 }
                 Cut_lines();
                 Make_file();
@@ -1143,7 +1088,7 @@ namespace Galaxies_console
                 }
             }
             int sum = 0;
-            int sum_max = 0, ind = -1;
+            int sum_max = 0, ind = -1, ind1 = -1, sum_max1 = 0;
             for (int i = 0; i < num; i++)
             {
                 sum = 0;
@@ -1156,8 +1101,19 @@ namespace Galaxies_console
                 }
                 if (sum > sum_max)
                 {
+                    int t = sum_max, it = ind;
                     sum_max = sum;
                     ind = i;
+                    if (sum_max1 < t)
+                    {
+                        sum_max1 = t;
+                        ind1 = it;
+                    }
+                }
+                else if (sum > sum_max1)
+                {
+                    sum_max1 = sum;
+                    ind1 = i;
                 }
             }
             for (int j = 0; j < sh.Count; j++)
@@ -1169,7 +1125,7 @@ namespace Galaxies_console
             }
             for (int j = 0; j < sh.Count; j++)
             {
-                if (sh[j].Number_of_cluster == ind)
+                if (sh[j].Number_of_cluster == ind || sh[j].Number_of_cluster == ind1)
                 {
                     sw.WriteLine(sh[j].Objid);
                 }

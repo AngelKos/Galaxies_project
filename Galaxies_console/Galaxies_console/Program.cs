@@ -13,8 +13,7 @@ namespace Galaxies_console
             string s = Console.ReadLine();
             Cluster cluster = new Cluster(s);
             cluster.Finding_clusters();
-            Console.WriteLine("Analysis of file is ended.");
-            Console.ReadKey();
+            Console.WriteLine("Анализ файла ", s, " закончен.");
         }
     }
 }
