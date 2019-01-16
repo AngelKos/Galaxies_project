@@ -52,3 +52,12 @@ D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Release\Galaxies.c
 D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Release\Galaxies.Form1.resources
 D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Release\Galaxies.Properties.Resources.resources
 D:\MyProjects\DiplomaPoKo\Project\Galaxies_new_1\Galaxies\obj\Release\Galaxies.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\bin\Release\Galaxies.exe.config
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Release\Galaxies.exe
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Release\Galaxies.pdb
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\bin\Release\Galaxies.exe
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\bin\Release\Galaxies.pdb
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Release\Galaxies.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Release\Galaxies.Form1.resources
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Release\Galaxies.Properties.Resources.resources
+C:\Users\User\Documents\Galaxies - Изменяемая версия\Galaxies_new_1\Galaxies\obj\Release\Galaxies.csproj.GenerateResource.Cache

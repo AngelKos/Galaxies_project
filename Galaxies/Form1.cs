@@ -23,7 +23,8 @@ namespace Galaxies
         ulong Objid_of_Divide;
         bool algorythmed = false;
         int ind_min = -1, ind_max = -1;
-        double[] parameters = { 0.35, 0.35, 0.35, 0.35 };
+        double[] parameters = { 0.1, 0.001, 0.06, 0.08 };
+        double Merge_parameter = 0.05;
 
         public Form1()
         {
@@ -863,6 +864,11 @@ namespace Galaxies
 
         void Ant_algorithm()
         {
+            for(int i = 0; i < sh.Count; i++)
+            {
+                sh[i].Draw_Line = false;
+                sh[i].Next_index = 0;
+            }
             AntAlghorithm a = new AntAlghorithm(length, sh);
             List<List<bool>> aa = a.Algorithm();
             for(int i = 0; i < aa.Count; i++)
@@ -1147,12 +1153,12 @@ namespace Galaxies
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            panel1.Height = Form1.ActiveForm.Height - 38;
-            panel2.Height = Form1.ActiveForm.Height - 38;
-            panel1.Width = Form1.ActiveForm.Width - 16;
-            panel2.Width = Form1.ActiveForm.Width - 116;
-            pictureBox1.Height = Form1.ActiveForm.Height - button_next_algorithm.Height - hScrollBar1.Height - 38;
-            pictureBox1.Width = Form1.ActiveForm.Width - vScrollBar1.Width - 16;
+            panel1.Height = this.Height - 38;
+            panel2.Height = this.Height - 38;
+            panel1.Width = this.Width - 16;
+            panel2.Width = this.Width - 116;
+            pictureBox1.Height = this.Height - button_next_algorithm.Height - hScrollBar1.Height - 38;
+            pictureBox1.Width = this.Width - vScrollBar1.Width - 16;
             pictureBox1.Invalidate();
         }
 
@@ -1313,11 +1319,40 @@ namespace Galaxies
                     sum++;
                 }
             }
-            for (int j = 0; j < sh.Count; j++)
+            double center_z = 0, center_z_1 = 0, count = 0, count_1 = 0;
+            for(int j = 0; j < sh.Count; j++)
             {
-                if (sh[j].Number_of_cluster == ind || sh[j].Number_of_cluster == ind1)
+                if(sh[j].Number_of_cluster == ind)
                 {
-                    sw.WriteLine(sh[j].Objid);
+                    center_z += sh[j].Redshift * sh[j].Mass;
+                    count++;
+                }
+                if(sh[j].Number_of_cluster == ind1)
+                {
+                    center_z_1 += sh[j].Redshift * sh[j].Mass;
+                    count_1++;
+                }
+            }
+            center_z = center_z / count;
+            center_z_1 = center_z_1 / count_1;
+            if (Math.Abs(center_z_1 - center_z) <= Merge_parameter)
+            {
+                for (int j = 0; j < sh.Count; j++)
+                {
+                    if (sh[j].Number_of_cluster == ind || sh[j].Number_of_cluster == ind1)
+                    {
+                        sw.WriteLine(sh[j].Objid);
+                    }
+                }
+            }
+            else
+            {
+                for (int j = 0; j < sh.Count; j++)
+                {
+                    if (sh[j].Number_of_cluster == ind)
+                    {
+                        sw.WriteLine(sh[j].Objid);
+                    }
                 }
             }
             sum = 0;
@@ -1432,7 +1467,16 @@ namespace Galaxies
                     case 1: Method_of_branches_and_borders(); break;
                     case 2: Algorythm_of_Dejkstra(); break;
                     case 3: Method_of_local_improvement(); break;
-                    case 4: Ant_algorithm(); break;
+                    case 4:
+                        {
+                            for (int i = 0; i < sh.Count; i++)
+                            {
+                                sh[i].Next_index = -1;
+                                sh[i].Draw_Line = false;
+                            }
+                            Ant_algorithm(); 
+                            break;
+                        }
                     case 5: Method_K_average(); break;
                 }
                 Cut_lines();
